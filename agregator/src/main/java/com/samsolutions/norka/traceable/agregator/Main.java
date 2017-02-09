@@ -1,13 +1,18 @@
-package com.samsolutions.traceable;
+package com.samsolutions.norka.traceable.agregator;
 
-import com.samsolutions.traceable.config.TraceableConfig;
 import com.samsolutions.traceable.util.Statistic;
 import com.samsolutions.traceable.util.config.UtilConfig;
+import com.samsolutions.traceablestub.stub.Traceable;
+import com.samsolutions.traceablestub.stub.config.TraceableConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+/**
+ * Created by dznor on 08.02.2017.
+ */
 public class Main {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+//        ConfigurableApplicationContext
         context.register(TraceableConfig.class);
         context.register(UtilConfig.class);
         context.refresh();
@@ -24,6 +29,7 @@ public class Main {
         obj2.doBusinessLogic(1.);
         obj3.doBusinessLogic("abc");
 
-        statistic.show3LongestOperations();
+//        statistic.showLongestOperations();
+        context.close();
     }
 }

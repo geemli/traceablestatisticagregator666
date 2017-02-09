@@ -1,4 +1,4 @@
-package com.samsolutions.traceable;
+package com.samsolutions.traceablestub.stub;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package com.samsolutions.traceable;
+package com.samsolutions.traceablestub.stub;
 
 public interface Traceable<T> {
 
